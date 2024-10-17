@@ -1,13 +1,13 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import prettier from "eslint-plugin-prettier";
-import jest from "eslint-plugin-jest";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import prettier from 'eslint-plugin-prettier';
+import jest from 'eslint-plugin-jest';
 
 export default [
   {
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
         ...globals.browser,
         ...globals.node,
@@ -25,9 +25,9 @@ export default [
     },
   },
   {
-    files: ["**/*.test.js"],
+    files: ['**/*.test.js'],
     rules: {
-      "jest/prefer-expect-assertions": "off",
+      'jest/prefer-expect-assertions': 'off',
     },
   },
 ];
