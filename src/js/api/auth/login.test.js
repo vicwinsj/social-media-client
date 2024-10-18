@@ -17,8 +17,8 @@ beforeEach(() => {
 
 describe('login function', () => {
   beforeEach(() => {
-    fetch.mockClear(); // Clear previous mock calls
-    jest.clearAllMocks(); // Clear all mocks before each test
+    fetch.mockClear();
+    jest.clearAllMocks();
   });
 
   it('succeeds with valid credentials', async () => {
