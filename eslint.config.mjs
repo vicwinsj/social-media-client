@@ -10,10 +10,24 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...Object.fromEntries(Object.entries(globals.browser || {}).map(([key]) => [key, 'readonly'])),
-        ...Object.fromEntries(Object.entries(globals.node || {}).map(([key]) => [key, 'readonly'])),
-        ...Object.fromEntries(Object.entries(globals.es2021 || {}).map(([key]) => [key, 'readonly'])),
-        ...Object.fromEntries(Object.entries(globals.jest || {}).map(([key]) => [key, 'readonly'])),
+        ...Object.fromEntries(
+          Object.entries(globals.browser || {}).map(([key]) => [
+            key,
+            'readonly',
+          ]),
+        ),
+        ...Object.fromEntries(
+          Object.entries(globals.node || {}).map(([key]) => [key, 'readonly']),
+        ),
+        ...Object.fromEntries(
+          Object.entries(globals.es2021 || {}).map(([key]) => [
+            key,
+            'readonly',
+          ]),
+        ),
+        ...Object.fromEntries(
+          Object.entries(globals.jest || {}).map(([key]) => [key, 'readonly']),
+        ),
         Cypress: 'readonly',
         cy: 'readonly',
       },
