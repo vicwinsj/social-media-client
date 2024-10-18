@@ -9,7 +9,10 @@
     "lint": "eslint '**/*.js'",
     "format": "prettier --write '**/*.{js,css,md}'",
     "prepare": "husky",
-    "test": "jest"
+    "test": "jest",
+    "test-e2e": "cypress open",
+    "test-e2e-report": "cypress run --reporter mochawesome",
+    "test-e2e-cli": "cypress run"
   },
   "keywords": [],
   "author": "Noroff",
@@ -18,8 +21,10 @@
     "@babel/core": "^7.25.8",
     "@babel/preset-env": "^7.25.8",
     "@eslint/js": "^9.12.0",
+    "cypress": "^13.15.0",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^4.0.0",
     "eslint-plugin-jest": "^28.8.3",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.11.0",

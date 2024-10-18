@@ -11,7 +11,8 @@ export async function loginListener(event) {
   try {
     const { name } = await auth.login(email, password);
     updateLoginVisibility();
-    location.href = `./?view=profile&name=${name}`;
+    // location.href = `./?view=profile&name=${name}`;
+    window.history.pushState({}, '', `./?view=profile&name=${name}`);
   } catch {
     return alert(
       'Either your username was not found or your password is incorrect',
